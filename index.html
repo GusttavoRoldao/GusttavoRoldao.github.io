@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frasezinha do Dia </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Frase do Dia</h1>
+        <div class="phrase" id="phrase"></div>
+
+        <button onclick="location.reload()">Nova Frase</button>
+    </div>
+
+    <script>
+        const phrases = [
+            '"Penso, logo existo." – René Descartes',
+            '"A vida deve ser vivida para frente, mas só pode ser compreendida olhando-se para trás." – Søren Kierkegaard',
+            '"O homem nasce livre, e por toda parte encontra-se a ferros." – Jean-Jacques Rousseau',
+            '"Torna-te aquilo que és." – Friedrich Nietzsche',
+            '"Só sei que nada sei." – Sócrates',
+            '"O que não me mata, me fortalece." – Friedrich Nietzsche',
+            '"A liberdade é a consciência da necessidade." – Karl Marx',
+            '"O homem é aquilo que ele faz de si mesmo." – Jean-Paul Sartre',
+            '"A felicidade é o significado e o propósito da vida." – Aristóteles',
+            '"A maior parte dos homens é mais capaz de grandes ações do que de boas." – Montesquieu'
+        ];
+
+        function displayRandomPhrase() {
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            document.getElementById('phrase').innerText = phrases[randomIndex];
+        }
+
+        window.onload = displayRandomPhrase;
+    </script>
+</body>
+</html>
