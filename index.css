@@ -1,6 +1,6 @@
 body {
     color: aliceblue;
-    background-color: black;
+    background-color: #090909;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -8,10 +8,10 @@ ul {
     display: flex;
     list-style-type: none;
     align-items: center;
-    justify-content: center; 
-    padding: 80px;
+    justify-content: center;
+    padding: 90px;
     margin: 0px;
-    gap: 40px; 
+    gap: 40px;
 }
 
 a {
@@ -22,13 +22,13 @@ a {
 img {
     width: 100px; 
     height: 100px; 
-    transform: translateY(-190px); 
+    transform: translateY(-200px); 
     margin: 0px; 
 }
 
 .center {
-    text-align: center; 
-    position: relative; 
+    text-align: center;
+    position: relative;
 }
 
 .cart-icon {
@@ -46,5 +46,173 @@ img {
 
 .header-container {
     background-color: rgb(57, 24, 57); 
-    padding: -40px;
+    height: 130px;
+}
+
+/* Estilo da linha separadora */
+.separator-line {
+    width: 100%; /* Defina a largura da linha */
+    height: 1px; /* Altura da linha */
+    background-color: rgba(240, 248, 255, 0.466); /* Cor da linha */
+    margin: 0px auto; /* Espaço ao redor da linha e centralização */
+    border: none;
+}
+
+/* Estilos para os produtos */
+.product-grid {
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px; /* Largura fixa para os cards de produtos */
+    border:rgb(57, 24, 57) 5px solid;
+}
+
+.ver-todos {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+/* Estilos principais da página do produto */
+.product-page {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    /* padding: 50px 100px; */
+    background-color: #000;
+    color: #fff;
+}
+
+/* Seção de imagens do produto */
+.product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.product-images img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Imagem principal do produto */
+.product-main-image {
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Seção de detalhes do produto */
+.product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-details h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-details .price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-details select,
+.product-details .quantity,
+.product-details .buy-btn {
+    margin-top: 10px;
+}
+
+.product-details .buy-btn {
+    padding: 12px 25px;
+    background-color: #f0f0f0;
+    color: #000;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para as informações adicionais (CEP, prazo, devolução) */
+.product-info {
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+.product-info .cep,
+.product-info .delivery,
+.product-info .returns {
+    margin-top: 10px;
+}
+
+/* Estilos responsivos para tamanhos menores */
+@media (max-width: 768px) {
+    .product-page {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .product-images img {
+        width: 100%;
+    }
+
+    .product-main-image {
+        width: 100%;
+    }
+
+    .product-details {
+        align-items: center;
+    }
+}
+
+.contact-section {
+    padding: 20px;
+    background-color: #090909; /* Fundo claro para a seção de contato */
+    border: 1px solid #3a153d; /* Borda leve */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin: 20px; /* Margem para afastar a seção das bordas do container */
+}
+
+.contact-section h2 {
+    color: rgb(57, 24, 57); /* Cor do texto do título */
+}
+
+.contact-info {
+    margin: 10px 0; /* Margem para espaçamento entre as informações */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Margem para cada parágrafo */
+}
+
+.whatsapp-button {
+    display: inline-block; /* Exibe o botão como bloco inline */
+    padding: 10px 20px; /* Preenchimento do botão */
+    background-color: rgb(57, 24, 57); /* Cor padrão do WhatsApp */
+    color: #fff; /* Cor do texto do botão */
+    text-decoration: none; /* Remove sublinhado do texto */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+}
+
+.whatsapp-button:hover {
+    background-color: #200d29; /* Cor ao passar o mouse */
 }
