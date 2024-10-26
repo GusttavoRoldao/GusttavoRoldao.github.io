@@ -4,52 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato Strivee</title>
-    <link rel="stylesheet" href="index.css"> <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="header-container"> <!-- Novo container para fundo roxo -->
-        <nav>
+    <header class="header-container">
+        <nav aria-label="Menu de Navegação">
             <ul>
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="catalogo.html">Catalogo</a>
-                </li>
-                <li>
-                    <a href="contato.html">Contato</a>
-                </li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
 
-        <!-- Linha separadora personalizada -->
         <div class="separator-line"></div>
 
-        <header>
-            <div class="center">
-                <img src="./img/logo.png" alt="Logo">
-                <div class="cart-icon">
-                    <a href="carrinho.html"> <!-- Link para a página do carrinho -->
-                        <img src="./img/carrinho.png" alt="Carrinho">
-                    </a>
-                </div>
+        <div class="center">
+            <img src="./img/logo.png" alt="Logo Strivee">
+            <div class="cart-icon">
+                <a href="carrinho.html" aria-label="Carrinho de compras">
+                    <img src="./img/carrinho.png" alt="Ícone do Carrinho">
+                </a>
             </div>
-        </header>
+        </div>
+    </header>
+
     <main>
-        <div id="contato" class="contact-section">
+        <section id="contato" class="contact-section">
             <h2>Contato</h2>
             <p>Se você tiver alguma dúvida ou precisar de assistência, entre em contato conosco:</p>
             
             <div class="contact-info">
                 <p><strong>Email:</strong> naoentreemcontato@gmail.com</p>
                 <p><strong>Telefone:</strong> (77) 98869-9776</p>
-                <p><strong>Endereço:</strong> nao temos endereço mano</p>
+                <p><strong>Endereço:</strong> Não temos endereço.</p>
             </div>
             
-            <a href="https://api.whatsapp.com/send?phone=5577988689776" class="whatsapp-button" target="_blank">
+            <a href="https://api.whatsapp.com/send?phone=5577988689776" class="whatsapp-button" target="_blank" aria-label="Fale conosco no WhatsApp">
                 Fale Conosco no WhatsApp
             </a>
-        </div>
+
+            <!-- Formulário de Contato La que esqueci o nome -->
+            <form class="contact-form" action="enviar_mensagem.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
 
     <footer>
@@ -57,5 +64,3 @@
     </footer>
 </body>
 </html>
-</body>
-

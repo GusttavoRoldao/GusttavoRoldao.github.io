@@ -9,7 +9,7 @@ ul {
     list-style-type: none;
     align-items: center;
     justify-content: center;
-    padding: 90px;
+    padding: 10px; /* Diminuição do padding para alinhar melhor os links */
     margin: 0px;
     gap: 40px;
 }
@@ -51,17 +51,16 @@ img {
 
 /* Estilo da linha separadora */
 .separator-line {
-    width: 100%; /* Defina a largura da linha */
-    height: 1px; /* Altura da linha */
-    background-color: rgba(240, 248, 255, 0.466); /* Cor da linha */
-    margin: 0px auto; /* Espaço ao redor da linha e centralização */
+    width: 100%;
+    height: 1px;
+    background-color: rgba(240, 248, 255, 0.466);
+    margin: 0px auto;
     border: none;
 }
 
 /* Estilos para os produtos */
 .product-grid {
     display: flex;
-    /* justify-content: center; */
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
@@ -72,8 +71,8 @@ img {
     padding: 10px;
     border-radius: 15px;
     text-align: center;
-    width: 300px; /* Largura fixa para os cards de produtos */
-    border:rgb(57, 24, 57) 5px solid;
+    width: 300px;
+    border: rgb(57, 24, 57) 5px solid;
 }
 
 .ver-todos {
@@ -89,7 +88,6 @@ img {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    /* padding: 50px 100px; */
     background-color: #000;
     color: #fff;
 }
@@ -184,35 +182,71 @@ img {
     }
 }
 
+/* Estilos da seção de contato */
 .contact-section {
-    padding: 20px;
-    background-color: #090909; /* Fundo claro para a seção de contato */
-    border: 1px solid #3a153d; /* Borda leve */
-    border-radius: 5px; /* Bordas arredondadas */
-    margin: 20px; /* Margem para afastar a seção das bordas do container */
+    padding: 40px; /* Aumenta o padding para mais espaço interno */
+    background-color: #090909;
+    border: 1px solid #3a153d;
+    border-radius: 5px;
+    margin: 20px auto; /* Centraliza a seção de contato */
+    max-width: 600px; /* Limita a largura da seção de contato */
 }
 
 .contact-section h2 {
-    color: rgb(57, 24, 57); /* Cor do texto do título */
+    color: rgb(57, 24, 57);
+    text-align: center; /* Centraliza o título */
 }
 
 .contact-info {
-    margin: 10px 0; /* Margem para espaçamento entre as informações */
+    margin: 10px 0;
+    text-align: center; /* Centraliza as informações de contato */
 }
 
 .contact-info p {
-    margin: 5px 0; /* Margem para cada parágrafo */
+    margin: 5px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #3a153d;
+    border-radius: 5px;
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: rgb(57, 24, 57);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #200d29;
 }
 
 .whatsapp-button {
-    display: inline-block; /* Exibe o botão como bloco inline */
-    padding: 10px 20px; /* Preenchimento do botão */
-    background-color: rgb(57, 24, 57); /* Cor padrão do WhatsApp */
-    color: #fff; /* Cor do texto do botão */
-    text-decoration: none; /* Remove sublinhado do texto */
-    border-radius: 5px; /* Bordas arredondadas do botão */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(57, 24, 57);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .whatsapp-button:hover {
-    background-color: #200d29; /* Cor ao passar o mouse */
+    background-color: #200d29;
 }
